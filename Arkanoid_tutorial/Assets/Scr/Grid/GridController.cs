@@ -5,9 +5,35 @@ public class GridController : MonoBehaviour
 {
     [SerializeField]
     private Vector2 _offset = new Vector2(-5.45f, 4);
-    //[SerializeField]
+    
     private LevelData _currentLevelData;
+    
+    private Dictionary<int, BlockTile> _blockTiles = new Dictionary<int, BlockTile>();
+    
+    public BlockTile GetBlockBy(int id)
+    {
+        if (_blockTiles.TryGetValue(id, out BlockTile block))
+        {
+            return block;
+        }
 
+        return null;
+    }
+    
+    public int GetBlocksActive()
+    {
+        int totalActiveBlocks = 0;
+        foreach (BlockTile block in _blockTiles.Values)
+        {
+            if (block.gameObject.activeSelf)
+            {
+                totalActiveBlocks++;
+            }
+        }
+
+        return totalActiveBlocks;
+    }
+    
     public void BuildGrid(LevelData levelData)
     {
         _currentLevelData = levelData;
@@ -18,6 +44,8 @@ public class GridController : MonoBehaviour
     
     private void BuildGrid()
     {
+        int id = 0;
+        
         int rowCount = _currentLevelData.RowCount;
         float verticalSpacing = _currentLevelData.rowSpacing;
 
@@ -29,6 +57,7 @@ public class GridController : MonoBehaviour
             float horizontalSpacing = rowData.blockSpacing;
             Vector2 blockSize = GetBlockSize(rowData.BlockType);
             BlockTile blockTilePerfab = Resources.Load<BlockTile>(GetBlockPath(rowData.BlockType));
+            BlockColor blockColor = rowData.BlockColor;
 
             if (blockTilePerfab == null)
             {
@@ -42,7 +71,11 @@ public class GridController : MonoBehaviour
                 float y = _offset.y - (blockSize.y + verticalSpacing) * j;
                 blockTile.transform.position = new Vector3(x, y, 0);
                 
+                blockTile.SetData(id, blockColor);
                 blockTile.Init();
+                
+                _blockTiles.Add(id, blockTile);
+                id++;
             }
         }
     }
@@ -61,6 +94,8 @@ public class GridController : MonoBehaviour
                 DestroyImmediate(transform.GetChild(i).gameObject);
             }
         }
+        
+        _blockTiles.Clear();
     }
     
     private Vector2 GetBlockSize(BlockType type)

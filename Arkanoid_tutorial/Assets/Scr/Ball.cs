@@ -74,4 +74,10 @@ public class Ball : MonoBehaviour
     }
 
 
+    public void Hide()
+    {
+        _collider.enabled = false;
+        gameObject.SetActive(false);
+    }
+
 }
