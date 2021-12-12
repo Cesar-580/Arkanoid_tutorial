@@ -155,7 +155,7 @@ Transform:
   - {fileID: 313548416}
   - {fileID: 388478142}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &257994450
 GameObject:
@@ -386,7 +386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &313599994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +452,7 @@ Transform:
   m_Children:
   - {fileID: 693035490}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388478139
 GameObject:
@@ -676,7 +676,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _offset: {x: -5.45, y: 4}
-  _currentLevelData: {fileID: 11400000, guid: 799743549a0f59c499e662d5c554b4a9, type: 2}
 --- !u!4 &605038793
 Transform:
   m_ObjectHideFlags: 0
@@ -799,12 +798,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904626187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -4.77, z: 0}
+  m_LocalPosition: {x: -0.02, y: -4.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 257994453}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &904626189
 MonoBehaviour:
@@ -836,6 +835,67 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.65, y: 0.44}
   m_Direction: 1
+--- !u!1001 &959735804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.6927409
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.41929
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012531, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012535, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_Name
+      value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 990903649230012535, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e8f9f6feafa6c643b26bb250e979506, type: 3}
 --- !u!1 &1355294248
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +1004,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 232914843}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1752822930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1752822932}
+  - component: {fileID: 1752822931}
+  m_Layer: 0
+  m_Name: Arkanoid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1752822931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752822930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8818138112da827428c73f3eaeea9f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gridController: {fileID: 605038792}
+  _levels:
+  - {fileID: 11400000, guid: 799743549a0f59c499e662d5c554b4a9, type: 2}
+--- !u!4 &1752822932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1752822930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3242366, y: -1.5133632, z: -0.7638067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2108794781
 GameObject:
@@ -1063,7 +1169,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7748636742595613718, guid: 5b246d09fa7ebcb44b11db194ccfd126, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7748636742595613718, guid: 5b246d09fa7ebcb44b11db194ccfd126, type: 3}
       propertyPath: m_LocalPosition.x
