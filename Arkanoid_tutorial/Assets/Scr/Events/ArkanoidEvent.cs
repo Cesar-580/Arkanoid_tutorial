@@ -1,6 +1,12 @@
 
 public static class ArkanoidEvent 
 {
+    public delegate void GameStartAction();
+    public static GameStartAction OnGameStartEvent;
+    
+    public delegate void GameOverAction();
+    public static GameOverAction OnGameOverEvent;
+    
     public delegate void BallDeadZoneAction(Ball ball);
     public static BallDeadZoneAction OnBallReachDeadZoneEvent;
     
@@ -9,4 +15,7 @@ public static class ArkanoidEvent
     
     public delegate void ScoreUpdatedAction(int score, int totalScore);
     public static ScoreUpdatedAction OnScoreUpdatedEvent;
+    
+    public delegate void LevelUpdatedAction(int level);
+    public static LevelUpdatedAction OnLevelUpdatedEvent;
 }
