@@ -106,6 +106,7 @@ public class ArkanoidController : MonoBehaviour
         if (blockDestroyed != null)
         {
             _totalScore += blockDestroyed.Score;
+            ArkanoidEvent.OnScoreUpdatedEvent?.Invoke(blockDestroyed.Score, _totalScore);
         }
         
         
